@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a35">
+  <meta name="description" content="Web de la U.D. Ideal Tres: plantilla, partidos, resultados y noticias del club.">
+  <title>U.D. Ideal Tres | Web oficial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><div class="container topbar-inner"><span>⚽ Pasión, equipo y orgullo</span><span>U.D. IDEAL TRES · TEMPORADA 2026/27</span></div></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="U.D. Ideal Tres, inicio">
+        <div class="crest crest-holder"><img src="assets/escudo.png" alt="" onerror="this.style.display='none'"><span>UD</span><b>IT</b></div>
+        <div><strong>U.D. IDEAL TRES</strong><small>UNIDOS POR LOS COLORES</small></div>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav id="mainNav">
+        <a href="#inicio">Inicio</a><a href="#club">El club</a><a href="#plantilla">Plantilla</a>
+        <a href="#partidos">Partidos</a><a href="#noticias">Noticias</a><a href="#patrocinadores">Patrocinadores</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow"><span></span> EL ORGULLO DE NUESTROS COLORES</p>
+        <h1>UN CLUB.<br><em>UNA FAMILIA.</em></h1>
+        <p class="hero-copy">Trabajo, compromiso y pasión por el fútbol. Bienvenidos a la casa de la U.D. Ideal Tres.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#partidos">Ver partidos <span>↗</span></a><a class="btn btn-outline" href="#plantilla">Conoce al equipo</a></div>
+        <div class="hero-tag"><strong>UD</strong><span>IDEAL<br>TRES</span></div>
+      </div>
+      <div class="hero-bottom"><div class="container hero-bottom-inner"><span>GRAN CANARIA</span><span>FÚTBOL · COMPAÑERISMO · HISTORIA</span></div></div>
+    </section>
+
+    <section class="section next-match-section" id="partidos">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow blue">EN EL CAMPO</p><h2>Próximo <em>partido</em></h2></div><span class="section-number">01 / COMPETICIÓN</span></div>
+        <div class="match-card" id="featuredMatch"></div>
+        <div class="results-heading"><h3>Calendario y resultados</h3><p>Partidos de la temporada</p></div>
+        <div class="table-wrap"><table><thead><tr><th>FECHA</th><th>PARTIDO</th><th>COMPETICIÓN</th><th>RESULTADO</th></tr></thead><tbody id="matchesTable"></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="section squad-section" id="plantilla">
+      <div class="container">
+        <div class="section-heading light"><div><p class="eyebrow">EL EQUIPO</p><h2>Defendemos <em>el escudo</em></h2></div><span class="section-number">02 / PLANTILLA</span></div>
+        <p class="section-intro">Cada jugador suma. Cada entrenamiento cuenta. Esta es la familia que representa a la U.D. Ideal Tres.</p>
+        <div class="team-filters" role="group" aria-label="Filtrar plantilla por categoría">
+          <button class="team-filter active" data-team-filter="Todos">Todos</button>
+          <button class="team-filter" data-team-filter="Juvenil">Juvenil</button>
+          <button class="team-filter" data-team-filter="Regional">Regional</button>
+        </div>
+        <div class="squad-grid" id="playersGrid"></div>
+        <p class="demo-note">Los nombres de ejemplo se pueden cambiar desde el panel de administración. Selecciona Juvenil o Regional para filtrar la plantilla.</p>
+      </div>
+    </section>
+
+    <section class="section about-section" id="club">
+      <div class="container about-grid">
+        <div class="about-visual"><div class="stadium-lines"></div><div class="big-crest"><img src="assets/escudo.png" alt="Escudo de la U.D. Ideal Tres" onerror="this.style.display='none'"><span>UD</span><strong>IT</strong><small>IDEAL TRES</small></div><div class="visual-caption">DESDE EL PRIMER MINUTO<br>HASTA EL ÚLTIMO</div></div>
+        <div class="about-copy"><p class="eyebrow blue">MÁS QUE FÚTBOL</p><h2>Un sentimiento<br>que nos <em>une.</em></h2><p>La U.D. Ideal Tres es esfuerzo, respeto y compañerismo. Entrenamos y competimos juntos, representando nuestros colores con orgullo dentro y fuera del terreno de juego.</p><div class="values"><div><strong>01</strong><span>Compromiso</span></div><div><strong>02</strong><span>Respeto</span></div><div><strong>03</strong><span>Familia</span></div></div><a class="text-link" href="#noticias">Descubre la actualidad del club <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section news-section" id="noticias">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow blue">DESDE EL VESTUARIO</p><h2>Últimas <em>noticias</em></h2></div><span class="section-number">03 / ACTUALIDAD</span></div>
+        <div class="news-grid" id="newsGrid"></div>
+      </div>
+    </section>
+
+    <section class="sponsors-section" id="patrocinadores">
+      <div class="container sponsors-inner"><div><p class="eyebrow">JUNTOS SOMOS MÁS FUERTES</p><h2>Nuestros <em>patrocinadores</em></h2><p>Gracias a quienes apoyan al equipo y hacen posible seguir creciendo.</p></div><div class="sponsor-list" id="sponsorsList"></div></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main"><a class="brand" href="#inicio"><div class="crest"><span>UD</span><b>IT</b></div><div><strong>U.D. IDEAL TRES</strong><small>UNIDOS POR LOS COLORES</small></div></a><p>Pasión por el fútbol. Orgullo por nuestro equipo.</p><a href="#inicio" class="back-top">VOLVER ARRIBA ↑</a></div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> U.D. Ideal Tres</span><span>Web de demostración · Actualiza los datos desde Administración</span><a href="#admin">Administración</a></div>
+  </footer>
+
+  <section class="admin-section" id="admin">
+    <div class="container">
+      <div class="section-heading"><div><p class="eyebrow blue">GESTIÓN DEL CLUB</p><h2>Panel de <em>administración</em></h2></div><span class="section-number">04 / ADMIN</span></div>
+      <div class="admin-warning"><strong>Importante:</strong> esta es una versión de demostración. Los cambios se guardan solo en este navegador. El acceso no está protegido de forma segura y no debe usarse para datos privados ni para administrar la web pública sin añadir un servidor y autenticación.</div>
+      <div class="admin-tabs" role="tablist">
+        <button class="admin-tab active" data-tab="playerAdmin">Añadir jugador</button>
+        <button class="admin-tab" data-tab="matchAdmin">Añadir partido</button>
+        <button class="admin-tab" data-tab="newsAdmin">Publicar noticia</button>
+        <button class="admin-tab" data-tab="sponsorAdmin">Patrocinadores</button>
+      </div>
+      <div class="admin-panel active" id="playerAdmin">
+        <form id="playerForm" class="admin-form">
+          <label>Nombre del jugador<input name="name" required placeholder="Ej. Rubén Moreno"></label>
+          <label>Dorsal<input name="number" type="number" min="1" max="99" required placeholder="Ej. 7"></label>
+          <label>Posición<select name="position"><option>Portero</option><option>Defensa</option><option>Centrocampista</option><option>Delantero</option><option>Cuerpo técnico</option></select></label>
+          <label>Categoría<select name="team"><option>Juvenil</option><option>Regional</option></select></label>
+          <button class="btn btn-primary" type="submit">Añadir jugador +</button>
+        </form>
+      </div>
+      <div class="admin-panel" id="matchAdmin">
+        <form id="matchForm" class="admin-form">
+          <label>Rival<input name="opponent" required placeholder="Ej. Equipo rival"></label>
+          <label>Fecha<input name="date" type="date" required></label>
+          <label>Hora<input name="time" type="time" value="20:30" required></label>
+          <label>Campo<input name="venue" placeholder="Ej. Campo local"></label>
+          <label>Competición<input name="competition" placeholder="Ej. Segunda Juvenil"></label>
+          <label>Resultado (opcional)<input name="score" placeholder="Ej. 2 - 1"></label>
+          <button class="btn btn-primary" type="submit">Guardar partido +</button>
+        </form>
+      </div>
+      <div class="admin-panel" id="newsAdmin">
+        <form id="newsForm" class="admin-form">
+          <label>Título<input name="title" required placeholder="Título de la noticia"></label>
+          <label>Fecha<input name="date" type="date" required></label>
+          <label class="full">Texto<textarea name="body" rows="4" required placeholder="Escribe la noticia..."></textarea></label>
+          <button class="btn btn-primary" type="submit">Publicar noticia +</button>
+        </form>
+      </div>
+      <div class="admin-panel" id="sponsorAdmin">
+        <form id="sponsorForm" class="admin-form">
+          <label>Nombre del patrocinador<input name="name" required placeholder="Nombre de la empresa"></label>
+          <label>Web (opcional)<input name="url" type="url" placeholder="https://ejemplo.com"></label>
+          <button class="btn btn-primary" type="submit">Añadir patrocinador +</button>
+        </form>
+      </div>
+      <div class="admin-bottom"><button class="btn btn-outline dark-outline" id="exportBtn" type="button">Exportar copia de datos (.json)</button><button class="btn btn-danger" id="resetBtn" type="button">Restaurar datos de ejemplo</button></div>
+      <p id="adminMessage" class="admin-message" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
